@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ng-dp
+  labels:
+    app: ng-dp
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: ng-dp
+  template:
+    metadata:
+      labels:
+        app: ng-dp
+    spec:
+      containers:
+        - image: vishwakarmad1999/nosk:1.0.3
+          name: ng-dp
+          ports:
+            - containerPort: 3000
