@@ -38,3 +38,27 @@ The reason being the number of replicas you provided k8s at the time of scaling 
 ```bash
 kubectl delete all -l app=ng-dp
 ```
+
+## In a similar fashion, if you want to check what is there in a specific label
+
+```bash
+kubectl get all -l app=ng-dp
+```
+
+## To apply a resource file
+
+```bash
+kubectl apply -f deployment.yaml
+```
+
+## To delete the resource(s) related to a file
+
+```bash
+kubectl delete -f deployment.yaml
+```
+
+## To check how k8s resolve the name of a service to its IP
+
+```bash
+k exec -it <pod-name> -- nslookup nginx
+```

@@ -1,1 +1,2 @@
-notes.md
+*.md
+/node_modules
